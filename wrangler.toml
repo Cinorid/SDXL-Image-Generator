@@ -1,5 +1,8 @@
 name = "sdxl-image-generator"
 main = "_worker.js"
 
+[ai]
+binding = "AI"
+
 [vars]
 ACCESS_PASSWORD = ""
