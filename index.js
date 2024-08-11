@@ -86,6 +86,12 @@ export default {
     const ai = new Ai(env.AI);
     const url = new URL(request.url);
 		const params = url.searchParams;
+    
+    let ACCESS_PASSWORD = `${env.ACCESS_PASSWORD}`;
+    if(ACCESS_PASSWORD == null)
+    {
+      ACCESS_PASSWORD = "";
+    }
 
     const formData = await request.formData();
     const password = formData.get('password');
@@ -97,7 +103,7 @@ export default {
       return new Response("What are you doing here :-| ???");
     }
     
-    if(password != "my-password")
+    if(password != ACCESS_PASSWORD)
     {
       return new Response("Wrong password :-/ ???");
     }
