@@ -1,0 +1,5 @@
+name = "sdxl-image-generator"
+main = "index.js"
+
+[vars]
+ACCESS_PASSWORD = ""
